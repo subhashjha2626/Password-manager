@@ -38,7 +38,7 @@ def brute_force_aes(encrypted_username, encrypted_password, key_space):
 # Generate key space: try 4-8 character alphanumeric combinations
 def generate_key_space():
     chars = string.ascii_letters + string.digits  # Alphanumeric characters
-    return (''.join(candidate) for length in range(4, 9) for candidate in itertools.product(chars, repeat=length))
+    return (''.join(candidate) for length in range(4, 10) for candidate in itertools.product(chars, repeat=length))
 
 # Load encrypted data from file
 def load_encrypted_data(file_path):
